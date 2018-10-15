@@ -41,5 +41,9 @@ extension LeftSidePanelVC : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let loginVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        present(loginVC, animated: true, completion: nil)
+        
+    }
 }
