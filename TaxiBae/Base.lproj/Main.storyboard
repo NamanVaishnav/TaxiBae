@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TaxiBae" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="TaxiBae" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-5b-tCM">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
                                         <state key="normal" image="menuSliderBtn"/>
+                                        <connections>
+                                            <action selector="menuBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJ2-FH-HHJ"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJk-ED-FiR">
                                         <rect key="frame" x="101.5" y="0.0" width="130" height="40"/>
@@ -200,6 +203,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Left Side PanelVC-->
+        <scene sceneID="cYN-wj-OoV">
+            <objects>
+                <viewController storyboardIdentifier="LeftSidePanelVC" id="IMv-QE-vlI" customClass="LeftSidePanelVC" customModule="TaxiBae" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lri-3C-pR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-UX-hD3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOj-G6-HDF">
+                                        <rect key="frame" x="24" y="23.5" width="67" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2ED-md-QZm"/>
+                                    <constraint firstItem="WOj-G6-HDF" firstAttribute="leading" secondItem="wQ9-UX-hD3" secondAttribute="leading" constant="24" id="IOt-Xv-VBj"/>
+                                    <constraint firstItem="WOj-G6-HDF" firstAttribute="centerY" secondItem="wQ9-UX-hD3" secondAttribute="centerY" id="nUI-aX-gfL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H05-99-vOr">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeftSidePanelCell" rowHeight="71" id="a4c-0K-OYv" customClass="LeftSidePanelCell" customModule="TaxiBae" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a4c-0K-OYv" id="vDC-w5-2eX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3m-Av-o4W">
+                                                    <rect key="frame" x="24" y="18" width="67" height="34.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="t3m-Av-o4W" firstAttribute="leading" secondItem="vDC-w5-2eX" secondAttribute="leading" constant="24" id="9Nd-Gq-y6f"/>
+                                                <constraint firstAttribute="bottom" secondItem="t3m-Av-o4W" secondAttribute="bottom" constant="18" id="abC-Yh-c9t"/>
+                                                <constraint firstItem="t3m-Av-o4W" firstAttribute="top" secondItem="vDC-w5-2eX" secondAttribute="top" constant="18" id="f33-oK-CE4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="t3m-Av-o4W" id="xm4-VT-lhR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IMv-QE-vlI" id="fRF-09-2J5"/>
+                                    <outlet property="delegate" destination="IMv-QE-vlI" id="haZ-li-MO6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SO8-iK-rHR" firstAttribute="trailing" secondItem="H05-99-vOr" secondAttribute="trailing" id="EbH-tZ-R3v"/>
+                            <constraint firstItem="SO8-iK-rHR" firstAttribute="bottom" secondItem="H05-99-vOr" secondAttribute="bottom" id="FDo-fe-pNG"/>
+                            <constraint firstItem="H05-99-vOr" firstAttribute="leading" secondItem="SO8-iK-rHR" secondAttribute="leading" id="Iv8-Cr-Kp9"/>
+                            <constraint firstItem="wQ9-UX-hD3" firstAttribute="top" secondItem="lri-3C-pR9" secondAttribute="top" id="P2z-rg-Hfh"/>
+                            <constraint firstItem="wQ9-UX-hD3" firstAttribute="leading" secondItem="SO8-iK-rHR" secondAttribute="leading" id="T9o-n1-6j4"/>
+                            <constraint firstItem="wQ9-UX-hD3" firstAttribute="trailing" secondItem="SO8-iK-rHR" secondAttribute="trailing" id="eCa-Wf-xi4"/>
+                            <constraint firstItem="H05-99-vOr" firstAttribute="top" secondItem="wQ9-UX-hD3" secondAttribute="bottom" id="nJP-0n-gsx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SO8-iK-rHR"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="H05-99-vOr" id="BEL-Li-nBG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3JS-3z-Wt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.60000000000002" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>

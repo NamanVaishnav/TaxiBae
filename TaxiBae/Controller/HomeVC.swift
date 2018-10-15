@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  TaxiBae
 //
 //  Created by naman vaishnav on 05/10/18.
@@ -9,10 +9,13 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var actionBtn: RoundedShadowButton!
+    var delegate : CenterVCDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +25,11 @@ class ViewController: UIViewController {
         actionBtn.animateButton(shouldLoad: true, withMessage: nil)
     }
     
+    @IBAction func menuBtnWasPressed(_ sender: Any) {
+        delegate?.toggleLeftPanel()
+    }
 }
 
-extension ViewController : MKMapViewDelegate{
+extension HomeVC : MKMapViewDelegate{
     
 }
