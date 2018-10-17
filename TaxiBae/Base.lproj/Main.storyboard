@@ -176,7 +176,6 @@
                         <constraints>
                             <constraint firstItem="Zh8-v2-Jej" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2IC-uM-hNl"/>
                             <constraint firstItem="67O-32-Acp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2cA-qb-XWp"/>
-                            <constraint firstItem="LbM-v5-LZe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="7ki-kL-mvR"/>
                             <constraint firstItem="pKL-Tk-xki" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYv-QL-EPN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1k-se-TEf" secondAttribute="trailing" constant="16" id="G3B-dy-Hty"/>
                             <constraint firstItem="J1k-se-TEf" firstAttribute="top" secondItem="67O-32-Acp" secondAttribute="bottom" constant="-25" id="G49-Ke-wHs"/>
@@ -188,6 +187,7 @@
                             <constraint firstItem="pKL-Tk-xki" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a7B-AN-ncw"/>
                             <constraint firstItem="LbM-v5-LZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="adC-IN-2qs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pKL-Tk-xki" secondAttribute="trailing" id="f4p-jn-qn0"/>
+                            <constraint firstItem="LbM-v5-LZe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="28" id="fHl-2F-6dW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTa-Uo-EVG" secondAttribute="trailing" constant="16" id="h3E-aQ-Skz"/>
                             <constraint firstItem="67O-32-Acp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="50" id="nem-p3-jab"/>
                             <constraint firstItem="pKL-Tk-xki" firstAttribute="top" secondItem="fTa-Uo-EVG" secondAttribute="bottom" constant="4" id="sTF-h5-uSL"/>
@@ -230,7 +230,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H05-99-vOr">
-                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="319"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeftSidePanelCell" rowHeight="71" id="a4c-0K-OYv" customClass="LeftSidePanelCell" customModule="TaxiBae" customModuleProvider="target">
@@ -263,21 +263,30 @@
                                     <outlet property="delegate" destination="IMv-QE-vlI" id="haZ-li-MO6"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jI2-Zy-zP9">
+                                <rect key="frame" x="0.0" y="399" width="375" height="268"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jI2-Zy-zP9" firstAttribute="leading" secondItem="SO8-iK-rHR" secondAttribute="leading" id="5HI-VF-VDj"/>
+                            <constraint firstItem="SO8-iK-rHR" firstAttribute="trailing" secondItem="jI2-Zy-zP9" secondAttribute="trailing" id="AIp-ad-7nU"/>
                             <constraint firstItem="SO8-iK-rHR" firstAttribute="trailing" secondItem="H05-99-vOr" secondAttribute="trailing" id="EbH-tZ-R3v"/>
-                            <constraint firstItem="SO8-iK-rHR" firstAttribute="bottom" secondItem="H05-99-vOr" secondAttribute="bottom" id="FDo-fe-pNG"/>
+                            <constraint firstItem="SO8-iK-rHR" firstAttribute="bottom" secondItem="H05-99-vOr" secondAttribute="bottom" constant="268" id="FDo-fe-pNG"/>
                             <constraint firstItem="H05-99-vOr" firstAttribute="leading" secondItem="SO8-iK-rHR" secondAttribute="leading" id="Iv8-Cr-Kp9"/>
                             <constraint firstItem="wQ9-UX-hD3" firstAttribute="top" secondItem="lri-3C-pR9" secondAttribute="top" id="P2z-rg-Hfh"/>
                             <constraint firstItem="wQ9-UX-hD3" firstAttribute="leading" secondItem="SO8-iK-rHR" secondAttribute="leading" id="T9o-n1-6j4"/>
+                            <constraint firstItem="jI2-Zy-zP9" firstAttribute="top" secondItem="H05-99-vOr" secondAttribute="bottom" id="Zw9-hG-Ybf"/>
                             <constraint firstItem="wQ9-UX-hD3" firstAttribute="trailing" secondItem="SO8-iK-rHR" secondAttribute="trailing" id="eCa-Wf-xi4"/>
+                            <constraint firstItem="SO8-iK-rHR" firstAttribute="bottom" secondItem="jI2-Zy-zP9" secondAttribute="bottom" id="fpr-lj-YDi"/>
                             <constraint firstItem="H05-99-vOr" firstAttribute="top" secondItem="wQ9-UX-hD3" secondAttribute="bottom" id="nJP-0n-gsx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SO8-iK-rHR"/>
                     </view>
                     <connections>
                         <outlet property="tblView" destination="H05-99-vOr" id="BEL-Li-nBG"/>
+                        <outlet property="viewBottom" destination="jI2-Zy-zP9" id="gCy-Z3-pQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JS-3z-Wt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,7 +318,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAXI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-Nb-qr9">
                                         <rect key="frame" x="0.0" y="0.0" width="109.5" height="66"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
-                                        <color key="textColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2d-HA-aZh">
@@ -335,7 +344,7 @@
                                     <segment title="Passenger"/>
                                     <segment title="Driver"/>
                                 </segments>
-                                <color key="tintColor" red="0.67455112930000005" green="0.15692374110000001" blue="0.10914970929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="wed-AC-lFq">
                                 <rect key="frame" x="12" y="364" width="351" height="127"/>
@@ -371,21 +380,32 @@
                                     <action selector="actionCancel:" destination="R28-9s-aWo" eventType="touchUpInside" id="JYL-hr-oXl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-Qk-3FS" customClass="RoundedShadowButton" customModule="TaxiBae" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlT-qD-soF">
                                 <rect key="frame" x="16" y="592" width="343" height="50"/>
-                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-Qk-3FS" customClass="RoundedShadowButton" customModule="TaxiBae" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="SIGN UP / LOGIN">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mig-Sc-Ccr"/>
+                                            <action selector="authBtnPressed:" destination="R28-9s-aWo" eventType="touchUpInside" id="vpJ-Yo-pdo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="nFa-NX-3lx"/>
+                                    <constraint firstAttribute="height" constant="50" id="0v3-fU-4iP"/>
+                                    <constraint firstItem="wBk-Qk-3FS" firstAttribute="top" secondItem="DlT-qD-soF" secondAttribute="top" id="Gpr-Cl-MBn"/>
+                                    <constraint firstAttribute="bottom" secondItem="wBk-Qk-3FS" secondAttribute="bottom" id="Hq8-Mk-8rR"/>
+                                    <constraint firstAttribute="trailing" secondItem="wBk-Qk-3FS" secondAttribute="trailing" id="Tgu-FM-cyW"/>
+                                    <constraint firstItem="wBk-Qk-3FS" firstAttribute="leading" secondItem="DlT-qD-soF" secondAttribute="leading" id="jRW-Ql-u1G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
-                                <inset key="titleEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="SIGN UP / LOGIN">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mig-Sc-Ccr"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -393,29 +413,35 @@
                             <constraint firstItem="wLu-g5-Xyj" firstAttribute="leading" secondItem="vy0-fX-O4j" secondAttribute="leading" id="7q6-u6-Sxq"/>
                             <constraint firstItem="vy0-fX-O4j" firstAttribute="trailing" secondItem="wed-AC-lFq" secondAttribute="trailing" constant="12" id="87F-uA-7iJ"/>
                             <constraint firstItem="sMB-O0-oeq" firstAttribute="leading" secondItem="vy0-fX-O4j" secondAttribute="leading" constant="12" id="DWT-aU-ViD"/>
-                            <constraint firstItem="vy0-fX-O4j" firstAttribute="bottom" secondItem="wBk-Qk-3FS" secondAttribute="bottom" constant="25" id="Hif-rq-ySH"/>
+                            <constraint firstItem="DlT-qD-soF" firstAttribute="leading" secondItem="vy0-fX-O4j" secondAttribute="leading" constant="16" id="Dsb-Xc-TMr"/>
                             <constraint firstItem="NdN-fe-Jpj" firstAttribute="top" secondItem="mE0-kp-VrE" secondAttribute="top" id="Mhf-64-7Rc"/>
                             <constraint firstItem="vy0-fX-O4j" firstAttribute="trailing" secondItem="NdN-fe-Jpj" secondAttribute="trailing" id="RhZ-yd-7rn"/>
                             <constraint firstItem="l7F-B6-t89" firstAttribute="leading" secondItem="mE0-kp-VrE" secondAttribute="leading" constant="12" id="SOO-61-nja"/>
                             <constraint firstItem="0w4-6l-h9Q" firstAttribute="centerX" secondItem="mE0-kp-VrE" secondAttribute="centerX" id="SWY-RZ-z9c"/>
                             <constraint firstItem="l7F-B6-t89" firstAttribute="top" secondItem="0w4-6l-h9Q" secondAttribute="bottom" constant="12" id="TZo-Cj-Btq"/>
                             <constraint firstItem="wLu-g5-Xyj" firstAttribute="top" secondItem="mE0-kp-VrE" secondAttribute="top" id="Ugw-jD-EMk"/>
+                            <constraint firstItem="vy0-fX-O4j" firstAttribute="trailing" secondItem="DlT-qD-soF" secondAttribute="trailing" constant="16" id="WKZ-1U-Lf3"/>
                             <constraint firstItem="1Ym-RT-xLm" firstAttribute="top" secondItem="mE0-kp-VrE" secondAttribute="top" constant="30" id="XcD-oq-2vd"/>
                             <constraint firstItem="vy0-fX-O4j" firstAttribute="bottom" secondItem="wLu-g5-Xyj" secondAttribute="bottom" id="ZQW-cN-vgS"/>
                             <constraint firstItem="vy0-fX-O4j" firstAttribute="bottom" secondItem="NdN-fe-Jpj" secondAttribute="bottom" id="ZeF-lG-rds"/>
                             <constraint firstItem="vy0-fX-O4j" firstAttribute="trailing" secondItem="sMB-O0-oeq" secondAttribute="trailing" constant="12" id="aBl-uk-i9i"/>
                             <constraint firstAttribute="trailing" secondItem="l7F-B6-t89" secondAttribute="trailing" constant="12" id="aJD-eF-HU7"/>
                             <constraint firstItem="NdN-fe-Jpj" firstAttribute="leading" secondItem="vy0-fX-O4j" secondAttribute="leading" id="boz-pB-DJy"/>
-                            <constraint firstItem="vy0-fX-O4j" firstAttribute="trailing" secondItem="wBk-Qk-3FS" secondAttribute="trailing" constant="16" id="dVa-lF-EaB"/>
                             <constraint firstItem="vy0-fX-O4j" firstAttribute="trailing" secondItem="wLu-g5-Xyj" secondAttribute="trailing" id="dkt-Ie-qAk"/>
-                            <constraint firstItem="wBk-Qk-3FS" firstAttribute="leading" secondItem="vy0-fX-O4j" secondAttribute="leading" constant="16" id="gsq-9I-7Bh"/>
                             <constraint firstItem="wed-AC-lFq" firstAttribute="leading" secondItem="vy0-fX-O4j" secondAttribute="leading" constant="12" id="nDe-5P-mNB"/>
                             <constraint firstItem="sMB-O0-oeq" firstAttribute="top" secondItem="l7F-B6-t89" secondAttribute="bottom" constant="22" id="p53-Ta-njA"/>
                             <constraint firstItem="wed-AC-lFq" firstAttribute="top" secondItem="sMB-O0-oeq" secondAttribute="bottom" constant="16" id="pdr-uU-7fR"/>
                             <constraint firstItem="0w4-6l-h9Q" firstAttribute="centerY" secondItem="mE0-kp-VrE" secondAttribute="centerY" multiplier="0.5" id="q3L-NA-yPE"/>
+                            <constraint firstItem="vy0-fX-O4j" firstAttribute="bottom" secondItem="DlT-qD-soF" secondAttribute="bottom" constant="25" id="s8k-st-Aab"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vy0-fX-O4j"/>
                     </view>
+                    <connections>
+                        <outlet property="authButton" destination="wBk-Qk-3FS" id="Bwq-4c-sb0"/>
+                        <outlet property="segmentedControl" destination="sMB-O0-oeq" id="bhE-K2-afH"/>
+                        <outlet property="txtEmail" destination="oaR-oB-JpC" id="BJH-ak-Axt"/>
+                        <outlet property="txtPassword" destination="4nK-U6-xat" id="VP2-UI-6tJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lj-7D-ltF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

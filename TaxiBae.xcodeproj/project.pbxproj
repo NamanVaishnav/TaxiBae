@@ -24,6 +24,9 @@
 		107655C921749923001E125E /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107655C821749923001E125E /* UIViewExt.swift */; };
 		107655CB2174B752001E125E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107655CA2174B752001E125E /* LoginVC.swift */; };
 		107655CD2174B90B001E125E /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107655CC2174B90B001E125E /* RoundedCornerTextField.swift */; };
+		1093DECC2175CC4E0074E7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1093DECB2175CC4E0074E7A4 /* GoogleService-Info.plist */; };
+		1093DECF2175CD680074E7A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093DECE2175CD680074E7A4 /* DataService.swift */; };
+		109CD7FE21760DB900208BB8 /* LeftPanelBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109CD7FD21760DB900208BB8 /* LeftPanelBottomView.xib */; };
 		176E04BD444EEB687D7E3394 /* Pods_TaxiBae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09AF282067B5D604B6C83F8 /* Pods_TaxiBae.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		107655C821749923001E125E /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		107655CA2174B752001E125E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		107655CC2174B90B001E125E /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		1093DECB2175CC4E0074E7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1093DECE2175CD680074E7A4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		109CD7FD21760DB900208BB8 /* LeftPanelBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftPanelBottomView.xib; sourceTree = "<group>"; };
 		7ACCAFCC09B141EA80BC8A67 /* Pods-TaxiBae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiBae.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaxiBae/Pods-TaxiBae.release.xcconfig"; sourceTree = "<group>"; };
 		B975827BD4F9A5EBF156E61E /* Pods-TaxiBae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiBae.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaxiBae/Pods-TaxiBae.debug.xcconfig"; sourceTree = "<group>"; };
 		C09AF282067B5D604B6C83F8 /* Pods_TaxiBae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxiBae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,7 @@
 				100DB0E921687DAF00D58F9E /* RoundImageView.swift */,
 				107655C521749759001E125E /* LeftSidePanelCell.swift */,
 				107655CC2174B90B001E125E /* RoundedCornerTextField.swift */,
+				109CD7FD21760DB900208BB8 /* LeftPanelBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 		101CF3EC21677CDF00B82F8B /* TaxiBae */ = {
 			isa = PBXGroup;
 			children = (
+				1093DECD2175CD550074E7A4 /* Services */,
 				107655C721749906001E125E /* Extensions */,
 				107655C221747AEF001E125E /* Protocols */,
 				101256452167B33A002F786A /* Controller */,
@@ -127,6 +135,7 @@
 				101CF3F421677CE100B82F8B /* Assets.xcassets */,
 				101CF3F621677CE100B82F8B /* LaunchScreen.storyboard */,
 				101CF3F921677CE100B82F8B /* Info.plist */,
+				1093DECB2175CC4E0074E7A4 /* GoogleService-Info.plist */,
 			);
 			path = TaxiBae;
 			sourceTree = "<group>";
@@ -145,6 +154,14 @@
 				107655C821749923001E125E /* UIViewExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1093DECD2175CD550074E7A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1093DECE2175CD680074E7A4 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AD4F512C578526F6034E8D1E /* Pods */ = {
@@ -225,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				101CF3F821677CE100B82F8B /* LaunchScreen.storyboard in Resources */,
+				109CD7FE21760DB900208BB8 /* LeftPanelBottomView.xib in Resources */,
+				1093DECC2175CC4E0074E7A4 /* GoogleService-Info.plist in Resources */,
 				101CF3F521677CE100B82F8B /* Assets.xcassets in Resources */,
 				101CF3F321677CDF00B82F8B /* Main.storyboard in Resources */,
 			);
@@ -301,6 +320,7 @@
 				100DB0F0216883B000D58F9E /* HomeVC.swift in Sources */,
 				101CF3EE21677CDF00B82F8B /* AppDelegate.swift in Sources */,
 				100DB0EA21687DAF00D58F9E /* RoundImageView.swift in Sources */,
+				1093DECF2175CD680074E7A4 /* DataService.swift in Sources */,
 				107655CB2174B752001E125E /* LoginVC.swift in Sources */,
 				101256472167B4C5002F786A /* GradientView.swift in Sources */,
 				100DB0E82168763F00D58F9E /* RoundedShadowButton.swift in Sources */,
