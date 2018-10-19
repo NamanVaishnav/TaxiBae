@@ -14,6 +14,7 @@
 		100DB0EE2168837C00D58F9E /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DB0ED2168837C00D58F9E /* LeftSidePanelVC.swift */; };
 		100DB0F0216883B000D58F9E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DB0EF216883B000D58F9E /* HomeVC.swift */; };
 		100DB0F22168841300D58F9E /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DB0F12168841300D58F9E /* ContainerVC.swift */; };
+		1011E36821774DA200927E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1011E36721774DA200927E1B /* MapKit.framework */; };
 		101256472167B4C5002F786A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101256462167B4C5002F786A /* GradientView.swift */; };
 		101CF3EE21677CDF00B82F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101CF3ED21677CDF00B82F8B /* AppDelegate.swift */; };
 		101CF3F321677CDF00B82F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CF3F121677CDF00B82F8B /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 		1093DECC2175CC4E0074E7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1093DECB2175CC4E0074E7A4 /* GoogleService-Info.plist */; };
 		1093DECF2175CD680074E7A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093DECE2175CD680074E7A4 /* DataService.swift */; };
 		109CD7FE21760DB900208BB8 /* LeftPanelBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109CD7FD21760DB900208BB8 /* LeftPanelBottomView.xib */; };
+		10B47F482179AB970011BB45 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B47F472179AB970011BB45 /* UpdateService.swift */; };
+		10B47F4A2179B66B0011BB45 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B47F492179B66B0011BB45 /* DriverAnnotation.swift */; };
 		176E04BD444EEB687D7E3394 /* Pods_TaxiBae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09AF282067B5D604B6C83F8 /* Pods_TaxiBae.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,7 @@
 		100DB0ED2168837C00D58F9E /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		100DB0EF216883B000D58F9E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		100DB0F12168841300D58F9E /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		1011E36721774DA200927E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		101256462167B4C5002F786A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		101CF3EA21677CDF00B82F8B /* TaxiBae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiBae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101CF3ED21677CDF00B82F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		1093DECB2175CC4E0074E7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1093DECE2175CD680074E7A4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		109CD7FD21760DB900208BB8 /* LeftPanelBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftPanelBottomView.xib; sourceTree = "<group>"; };
+		10B47F472179AB970011BB45 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
+		10B47F492179B66B0011BB45 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		7ACCAFCC09B141EA80BC8A67 /* Pods-TaxiBae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiBae.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaxiBae/Pods-TaxiBae.release.xcconfig"; sourceTree = "<group>"; };
 		B975827BD4F9A5EBF156E61E /* Pods-TaxiBae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiBae.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaxiBae/Pods-TaxiBae.debug.xcconfig"; sourceTree = "<group>"; };
 		C09AF282067B5D604B6C83F8 /* Pods_TaxiBae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxiBae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1011E36821774DA200927E1B /* MapKit.framework in Frameworks */,
 				176E04BD444EEB687D7E3394 /* Pods_TaxiBae.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +95,7 @@
 				107655C521749759001E125E /* LeftSidePanelCell.swift */,
 				107655CC2174B90B001E125E /* RoundedCornerTextField.swift */,
 				109CD7FD21760DB900208BB8 /* LeftPanelBottomView.xib */,
+				10B47F492179B66B0011BB45 /* DriverAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				1093DECE2175CD680074E7A4 /* DataService.swift */,
+				10B47F472179AB970011BB45 /* UpdateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 		F0F8AC0CDB66B32F3D547815 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1011E36721774DA200927E1B /* MapKit.framework */,
 				C09AF282067B5D604B6C83F8 /* Pods_TaxiBae.framework */,
 			);
 			name = Frameworks;
@@ -215,6 +225,14 @@
 				TargetAttributes = {
 					101CF3E921677CDF00B82F8B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -313,6 +331,8 @@
 			files = (
 				107655C421747B0F001E125E /* CenterVCDelegate.swift in Sources */,
 				100DB0E6216874DE00D58F9E /* CircleView.swift in Sources */,
+				10B47F482179AB970011BB45 /* UpdateService.swift in Sources */,
+				10B47F4A2179B66B0011BB45 /* DriverAnnotation.swift in Sources */,
 				100DB0EE2168837C00D58F9E /* LeftSidePanelVC.swift in Sources */,
 				100DB0E4216873FF00D58F9E /* RoundedShadowView.swift in Sources */,
 				100DB0F22168841300D58F9E /* ContainerVC.swift in Sources */,
