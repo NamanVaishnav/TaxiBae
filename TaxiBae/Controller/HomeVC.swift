@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import RevealingSplashView
 import CoreLocation
+import Firebase
 
 class HomeVC: UIViewController {
 
@@ -21,6 +22,7 @@ class HomeVC: UIViewController {
     
     let revelingSplashView = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
     
+    @IBOutlet weak var centerMapButton: UIButton!
     
     var manager: CLLocationManager?
     
@@ -37,12 +39,22 @@ class HomeVC: UIViewController {
         mapView.delegate = self
         centerMapOnUserLocation()
         
+        // monitor drivers reference in FB
+        DataService.instance.REF_DRIVERS.observe(.value) { (snapshot) in
+            // Load All Driver Annotation
+            self.loadDriverAnnotationFromFB()
+        }
+        
+        
+        
         self.view.addSubview(revelingSplashView)
         
         revelingSplashView.animationType = SplashAnimationType.woobleAndZoomOut
         revelingSplashView.startAnimation()
         
         revelingSplashView.heartAttack = true
+        
+ 
     }
     
     func checkLocationAuthStatus() {
@@ -53,6 +65,62 @@ class HomeVC: UIViewController {
         }
     }
 
+    
+    
+    func loadDriverAnnotationFromFB() {
+        DataService.instance.REF_DRIVERS.observeSingleEvent(of: .value) { (snapshot) in
+            if let driverSnapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for driver in driverSnapshot {
+                    
+                    if driver.hasChild("userIsDriver") {
+                        if driver.hasChild("coordinate") {
+                            if driver.childSnapshot(forPath: "isPickupModeEnabled").value as? Bool == true {
+                                if let driverDict = driver.value as? Dictionary<String, AnyObject> {
+                                    let coordinateArray = driverDict["coordinate"] as! NSArray
+                                    
+                                    let driverCoordinate = CLLocationCoordinate2D(latitude: coordinateArray[0] as! CLLocationDegrees, longitude: coordinateArray[1] as! CLLocationDegrees)
+                                    
+                                    // Annotation Creation
+                                    let annotation = DriverAnnotation(coordinate: driverCoordinate, withKey: driver.key)
+                                    
+                                    var driverIsVisible: Bool {
+                                        return self.mapView.annotations.contains(where: { (annotation) -> Bool in
+                                            if let driverAnnotation = annotation as? DriverAnnotation {
+                                                if driverAnnotation.key == driver.key {
+                                                    driverAnnotation.update(annotationPosition: driverAnnotation, withCoordinate: driverCoordinate)
+                                                    return true
+                                                }
+                                            }
+                                            return false
+                                        })
+                                    }
+                                    
+                                    
+                                    if !driverIsVisible {
+                                        self.mapView.addAnnotation(annotation)
+                                    }
+                                }
+                            } else {
+                                for annotation in self.mapView.annotations {
+                                    if annotation.isKind(of: DriverAnnotation.self){
+                                        if let annotation = annotation as? DriverAnnotation {
+                                            if annotation.key == driver.key {
+                                                self.mapView.removeAnnotation(annotation)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                }
+            }
+        }
+    }
+    
     func centerMapOnUserLocation() {
         let coordinateRegion = MKCoordinateRegion(center: mapView.userLocation.coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
@@ -67,6 +135,7 @@ class HomeVC: UIViewController {
     }
     @IBAction func centerMapButtonPressed(_ sender: Any) {
         centerMapOnUserLocation()
+        centerMapButton.fadeTo(alphaValue: 0.0, withDuration: 0.2)
     }
 }
 
@@ -95,11 +164,15 @@ extension HomeVC : MKMapViewDelegate{
             let identifier = "driver"
             var view: MKAnnotationView
             view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            view.image = UIImage(named: "driverAnnotaion")
+            view.image = UIImage(named: "driverAnnotation")
             
             return view
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        centerMapButton.fadeTo(alphaValue: 1.0, withDuration: 0.2)
     }
 }
 
